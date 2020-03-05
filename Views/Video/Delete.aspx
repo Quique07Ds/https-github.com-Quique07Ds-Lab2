@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Actualizar Registro</title>
+    <title>Delete</title>
   <meta charset="UTF-8">
   <meta name="description" content="CRUD Video ASP.NET MVC 2.0">
   <meta name="keywords" content="ASP.NET,MVC,Facpya">
@@ -13,27 +13,13 @@
     <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
- <form action="/Video/Edit" method="post">
-    <fieldset>
-    <legend>Datos del Video</legend>
-    <br />
-
-    <label for = "idVideo">IdVideo</label>
-    <input type="text" name= "idVideo"/>
-
-    <label for = "titulo">Titulo</label>
-    <input type="text" name= "titulo"/>
-
-    <label for = "repro">Reproduccion</label>
-    <input type="text" name= "repro" />
-
-    <label for = "url">URL</label>
-    <input type ="text" name= "url" />
-
-    <br />
-    <input type = "submit" value = "Actualizar" /> 
-
-    </fieldset>
+    <form action = "/Video/Delete" method = "post">
+        <fieldset>
+            <legend>Id del video</legend>
+            <label for = "idVideo">ID Video</label>
+            <input type = "text" name = "idVideo" />
+            <input type = "submit" value = "Eliminar" />
+        </fieldset>
     </form>
 </body>
 </html>

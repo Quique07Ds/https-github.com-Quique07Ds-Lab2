@@ -29,6 +29,8 @@
 <label for = "url">Url</label>
 <input type = "text" name = "url" />
 
+<input type = "submit" value "Registrar" />
+
 </fieldset>
 </form>
     <div>

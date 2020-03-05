@@ -6,10 +6,10 @@ url varchar(100)
 );
 
 CREATE PROCEDURE sp_video_insertar
-	@idVideo int,
-	@titulo varchar(100),
-	@repro int,
-	@url varchar(100)
+@idVideo int,
+@titulo varchar(100),
+@repro int,
+@url varchar(100)
 as
 begin
 	INSERT INTO video
@@ -27,8 +27,16 @@ CREATE PROCEDURE SP_video_ACTUALIZAR
 @url varchar(100)
 AS
 BEGIN
-UPDATE video SET titulo= @titulo, repro = @repro, url = @url WHERE idVideo = @idVideo 
+UPDATE video SET titulo = @titulo, repro = @repro, url = @url WHERE idVideo = @idVideo 
 END
 EXEC SP_video_ACTUALIZAR 1, 'mau', 3, 'felipo' 
 
 SELECT * FROM video
+
+CREATE PROCEDURE SP_video_ELIMINAR
+@idVideo int
+AS
+BEGIN
+DELETE FROM video WHERE idVideo = @idVideo
+END
+EXEC SP_video_ELIMINAR 1
