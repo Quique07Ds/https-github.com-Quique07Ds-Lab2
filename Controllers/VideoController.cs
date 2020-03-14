@@ -16,6 +16,8 @@ namespace MVCLaboratorio.Controllers
 
         public ActionResult Index()
         {
+            //Mostrar Datos
+            ViewData["video"] = BaseHelper.ejecutarConsulta("SP_video_MOSTRAR", CommandType.StoredProcedure);
             return View();
         }
 
@@ -72,5 +74,7 @@ namespace MVCLaboratorio.Controllers
             BaseHelper.ejecutarSentencia(sentencia, CommandType.StoredProcedure, parametros);
             return RedirectToAction("Index", "Video");
         }
+
+
     }
 }
